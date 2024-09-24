@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+.bg-pColor{
+    @apply bg-indigo-500 text-white;
+}
+.bg-pColorHover{
+    @apply bg-indigo-700;
+}
+.cancel_btn{
+    @apply rounded-full px-5 py-2 bg-gray-200 text-gray-900 hover:bg-gray-300 hover:text-gray-600;
+}
+.delete_btn{
+    @apply rounded-full px-5 py-2 bg-red-500 text-white hover:bg-red-600;
+}
+.btn-primary{
+    @apply rounded-full px-5 py-2 bg-indigo-500 text-white hover:bg-indigo-600;
+}
+.input{
+    @apply shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+}
+.ongoingRentalStatus{
+    @apply bg-yellow-600 text-white px-3 py-0.5 leading-tight rounded-full;
+}
+.completedRentalStatus{
+    @apply bg-green-600 text-white px-3 py-0.5 leading-tight rounded-full;
+}
+.canceledRentalStatus{
+    @apply bg-red-600 text-white px-3 py-0.5 leading-tight rounded-full;
+}
+.edit_btn{
+    @apply rounded-full px-3 py-1 bg-indigo-500 text-white hover:bg-indigo-600;
+}
+.view_btn{
+    @apply rounded-full px-3 py-1 bg-indigo-500 text-white hover:bg-indigo-600;
+}
+.dashboardIcon svg{
+    @apply w-[100px] text-indigo-600;
+}
+button.cancel_btn.pointer-disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
