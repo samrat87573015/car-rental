@@ -1,12 +1,20 @@
 <script setup>
     import { Link } from '@inertiajs/vue3';
+    import { defineProps } from 'vue';
+
+
+    const props = defineProps({
+        isActiveSidebar: Boolean
+    })
+
+
 
 </script>
 
 
 <template>
 <!--sidenav -->
-<div class="fixed left-0 top-0 w-64 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
+<div class="fixed left-0 top-0 w-64 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform " :class="isActiveSidebar ? '-translate-x-full' : ''">
     <Link href="/" class="flex items-center pb-4 border-b border-b-gray-800">
 
         <h2 class="font-bold text-md">Car <span class="bg-[#f84525] text-white px-2 rounded-md">Rental</span></h2>
@@ -68,6 +76,6 @@
     </div>
 
 </div>
-<div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+<div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay" :class ="isActiveSidebar ? 'hidden' : ''"></div>
 <!-- end sidenav -->
 </template>

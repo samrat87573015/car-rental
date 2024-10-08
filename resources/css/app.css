@@ -46,3 +46,8 @@ body{
 button.cancel_btn.pointer-disabled {
     @apply opacity-50 cursor-not-allowed pointer-events-none;
 }
+
+.main.active {
+    width: 100%;
+    margin-left: 0;
+}
