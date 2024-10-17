@@ -13,7 +13,6 @@ const toggleSidebar = () => {
     const updateSidebar = props.isActiveSidebar ? false : true;
     // Emit the new toggled value to the parent component
     emit('update:isActiveSidebar', updateSidebar);
-    console.log(updateSidebar); // Logs the new state after the emit
 };
 
 

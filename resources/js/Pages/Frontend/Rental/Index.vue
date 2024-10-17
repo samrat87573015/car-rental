@@ -3,7 +3,6 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import { defineProps, ref, computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import axios from 'axios';
-import { Inertia } from '@inertiajs/inertia'
 
 
 const props = defineProps({
