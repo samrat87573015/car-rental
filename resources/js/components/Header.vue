@@ -6,7 +6,7 @@ import { onMounted } from 'vue';
 const auth = useAuthStore();
 
 onMounted(() => {
-  auth.init(); // Initialize the user role on component mount
+  auth.init();
 });
 
 </script>

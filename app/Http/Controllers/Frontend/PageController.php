@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Car;
 use App\Models\Rental;
-use App\Helper\ResponsHelper;
 
 class PageController extends Controller
 {
@@ -31,7 +30,6 @@ class PageController extends Controller
 
         return Inertia::render('Frontend/Rental/Index',[
             'cars' => $cars,
-            // 'filters' => $request->only('car_type', 'brand', 'min_price', 'max_price'),
             'car_types' => $car_types,
             'brands' => $brands
         ]);

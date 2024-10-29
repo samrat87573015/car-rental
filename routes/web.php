@@ -1,15 +1,16 @@
 <?php
 
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\UserMiddleware;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
-use App\Http\Middleware\UserMiddleware;
 use App\Http\Controllers\Admin\CarController;
-use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\Admin\RentalController;
-use Inertia\Inertia;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\PageController;
+use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\DashboardController;
 
 
 
@@ -98,3 +99,6 @@ Route::group(['middleware' => [UserMiddleware::class]], function () {
 
 
 Route::get('/login', [UserController::class, 'loginPage'])->name('login');
+
+Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
+Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProviderCallback']);
